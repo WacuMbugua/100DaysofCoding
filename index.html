@@ -4,48 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flexbox Basics</title>
-    <link rel="stylesheet" href="custom.css">
-    <!--container properties-->
-<style>
-    .flexbox-container {
-        display: flex; 
-        flex-wrap: wrap;
-        flex-flow: column-reverse;
-        justify-content:space-between; 
-        align-items: center;
-        height: 95vh; 
-    } 
-    .flexbox-item {
-        width: 25%;
-        background-color: tomato;
-        border: 3px solid #272727;
-        color: #ffffff;
-        font-size: 2em;
-        padding: 20px;
-        margin: 10px;
-    }
-
-    .item-1 {
-        min-height: 50px;
-    }
-    .item-2 {
-        min-height: 100px;
-    }
-    .item-3 {
-        min-height: 250px;
-    }
-</style>
-
+    <title>Document</title>
+    <script src="js/angular.min.js"></script s>
 </head>
 <body>
-    <div class="flexbox-container">
-        <div class="flexbox-item item-1">This is box 1</div>
-        <div class="flexbox-item item-2">I am box 2!</div>
-        <div class="flexbox-item item-3">ola! box 3 here</div>
-        <div class="mainAxis"></div>
-        <div class="crossAxis"></div>
-        
-    </div>
+    <div ng-app="">
+        <p>Input myid in the input box:</p>
+        <p><input type="text" ng-model="id"</p>
+        <br>
+        <h1>Welcome!{{id}}</h1>
+ 
+    </div> 
+    <br>
+    <p>
+    <label>Name:   </label>
+    <input type = "text" ng-model = "yourName" placeholder = "Please enter your name.">
+    <br>
+    <h1>Hello  {{yourName}}!</h1>
+    </p>
+    <br>
+    <div ng-app="">
+     <p>User Name: <br>
+     <input type="text" ng-model = "Username"></p>
+     <p ng-bind="Username"></p> 
+     </div> 
 </body>
 </html>
+
+<!-- this is a trial-->
