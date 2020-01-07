@@ -1,28 +1,43 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- Load Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Load Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Load script file.  'defer' loads after body is generated -->
+    <script src="api.js" defer></script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #cccccc;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
+
 <body>
-   <div id="root">
-       <input type="text" id="input" v-model="message">
-       <p>Th value of the meesage is the {{ message }}.</p>
-            
-    </div> 
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-<script>
-    
-   new vue({
-       el: "#root",
-       data: {
-        message: "Hello World"
-       }
-   })
-</script>
-
+    <h1>Wakanda</h1>
+    <!-- Div where Vue runs -->
+    <div id="app">
+        <h2>Table</h2>
+        <table>
+            <tr>
+                <th>Country</th>
+                <th>Capital</th>
+                <th>Population</th>
+            </tr>
+            <tr v-for="country in countries_list">
+                <td>{{country.name}}</td>
+                <td>{{country.capital}}</td>
+                <td>{{country.population}}</td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
